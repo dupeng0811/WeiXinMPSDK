@@ -33,6 +33,11 @@
         public string thumb_media_id { get; set; }
 
         /// <summary>
+        /// 是否显示封面，0为false，即不显示，1为true，即显示(默认)
+        /// </summary>
+        public string show_cover_pic { get; set; }
+
+        /// <summary>
         /// 是否打开评论，0不打开，1打开
         /// </summary>
         public int need_open_comment { get; set; }

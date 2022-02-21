@@ -147,7 +147,7 @@ namespace Senparc.Weixin.MP.AdvancedAPIs.Draft
                     no_content = no_content
                 };
 
-                return CommonJsonSend.Send<DraftList_Result>(null, url, date, CommonJsonSendType.POST, timeOut);
+                return CommonJsonSend.Send<DraftList_Result>(accessToken, url, date, CommonJsonSendType.POST, timeOut);
 
             }, accessTokenOrAppId);
         }
@@ -289,11 +289,10 @@ namespace Senparc.Weixin.MP.AdvancedAPIs.Draft
                     no_content = no_content
                 };
 
-                return CommonJsonSend.SendAsync<DraftList_Result>(null, url, date, CommonJsonSendType.POST, timeOut);
+                return CommonJsonSend.SendAsync<DraftList_Result>(accessToken, url, date, CommonJsonSendType.POST, timeOut);
 
             }, accessTokenOrAppId).ConfigureAwait(false);
         }
-
 
         #endregion
     }
